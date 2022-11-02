@@ -17,6 +17,11 @@ const Form = () => {
             return
         }
 
+        if (amount > 10) {
+            setError("Please enter a valid amount (1-10)")
+            return
+        }
+
         setIsSubmitting(true)
         const entry = { name, email, amount: parseInt(amount)}
         AddEntry(entry)

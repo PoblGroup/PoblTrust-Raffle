@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import shuffle from 'lodash/shuffle';
 import Confetti from 'react-confetti';
+import { ColorRing } from  'react-loader-spinner'
 
 // import FetchNames from '../data'
 
@@ -77,7 +78,7 @@ export default function Home() {
     if (initialLoad) {
       const filteringTimer = setTimeout(() => {
         startRaffle();
-      }, 700);
+      }, 400);
       return () => {
         clearTimeout(filteringTimer);
       };
@@ -138,7 +139,18 @@ export default function Home() {
         <div className='flex flex-row flex-wrap justify-center items-center mt-16 w-full sm:w-2/3'>
         {isLoading ? 
         (
-          <p>Fetching potential winners...</p>
+          <div className='flex flex-col justify-center items-center'>
+            <ColorRing
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="blocks-loading"
+              wrapperStyle={{}}
+              wrapperClass="blocks-wrapper"
+              colors={['#059669', '#0284c7', '#4f46e5', '#9333ea', '#c026d3']}
+            />
+            <p>Fetching potential winners...</p>
+          </div>
         ) : 
         (
           names && names.map((n, i) => (
