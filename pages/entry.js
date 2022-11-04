@@ -4,10 +4,14 @@ import Form from '../components/Form'
 const entry = () => {
     return (
         <div className='bg-image bg-slate-900 text-white h-auto sm:h-screen w-screen flex flex-col items-center p-4 sm:p-8'>
-            <h1 className='text-4xl font-bold flex flex-col sm:flex-row sm:items-baseline'>
-            Raffle Giveaway{' '}
-            <span className='text-sm text-gray-500'>by Pobl Trust</span>
-            </h1>
+            <div className='flex justify-between items-center w-full lg:w-2/3'>
+                <h1 className='text-4xl font-bold flex flex-col sm:flex-row sm:items-baseline'>
+                    Raffle Giveaway
+                </h1>
+                <div className='w-[200px] p-4'>
+                    <img src='/trustlogo.png' alt='pobl trust logo' />
+                </div>
+            </div>
             <div className='bg-slate-800 shadow-xl flex flex-col sm:flex-row justify-center items-start pt-4 pb-8 mt-8 rounded-lg w-full lg:w-2/3 gap-4'> 
             {/* lg:w-1/3 sm:w-1/2 */}
                 <div className='flex flex-col w-full flex-1 justify-center py-3 px-4 sm:px-8 sm:border-r-2 sm:border-slate-900/50'>
