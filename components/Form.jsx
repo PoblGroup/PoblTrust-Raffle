@@ -67,7 +67,7 @@ const Form = () => {
     return (
         <>
         {errorMessage && (<p className='text-red-500 mb-6'>{errorMessage}</p>)}
-        <form className='px-4 py-2 w-full'>
+        <form className='p-8 w-full'>
             <div className="relative z-0 mb-6 w-full group">
                 <input value={name} onChange={(e) => setName(e.target.value)} type="text" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-slate-700 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-emerald-500 focus:outline-none focus:ring-0 focus:border-emerald-600 peer" placeholder=" " required />
                 <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-emerald-600 peer-focus:dark:text-emerald-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Your Name</label>
