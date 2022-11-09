@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const Form = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    // const [amount, setAmount] = useState('')
+    const [amount, setAmount] = useState('')
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -12,7 +12,7 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if(name === '' || email === '') {
+        if(name === '' || email === '' || amount === '') {
             setErrorMessage("You must fill in all fields.")
             return
         }
@@ -22,19 +22,13 @@ const Form = () => {
             return
         }
 
-        // if(name === '' || email === '' || amount === '') {
-        //     setError("You must fill in all fields")
-        //     return
-        // }
-
-        // if (amount > 10) {
-        //     setError("Please enter a valid amount (1-10)")
-        //     return
-        // }
+        if (amount > 10) {
+            setErrorMessage("Please enter a valid amount (1-10)")
+            return
+        }
 
         setIsSubmitting(true)
-        // const entry = { name, email, amount: parseInt(amount)}
-        const entry = { name, email }
+        const entry = { name, email, amount: parseInt(amount)}
         AddEntry(entry)
     }
 
@@ -65,7 +59,7 @@ const Form = () => {
         
         setName('')
         setEmail('')
-        // setAmount('')
+        setAmount('')
         
         setIsSubmitting(false)
     }
@@ -82,10 +76,10 @@ const Form = () => {
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-slate-700 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-emerald-500 focus:outline-none focus:ring-0 focus:border-emerald-600 peer" placeholder=" " required="" />
                 <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-emerald-600 peer-focus:dark:text-emerald-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
             </div>
-            {/* <div className="relative z-0 mb-6 w-full group">
+            <div className="relative z-0 mb-6 w-full group">
                 <input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" name="amount" id="amount" min={1} max={10} className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-slate-700 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-emerald-500 focus:outline-none focus:ring-0 focus:border-emerald-600 peer" placeholder=" " required="" />
                 <label htmlFor="amount" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-emerald-600 peer-focus:dark:text-emerald-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Amount</label>
-            </div> */}
+            </div>
             <button onClick={(e) => handleSubmit(e)} type="submit" disabled={isSubmitting ? true : false} className={`text-white bg-emerald-500 hover:bg-emerald-600 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-md text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800 mt-6 ${isSubmitting && 'bg-slate-600 hover:bg-slate-600/50 hover:cursor-wait'}`}>
                 {isSubmitting ? "Submitting" : "Submit"}
             </button>
