@@ -26,17 +26,17 @@ const entry = () => {
                         <div className='flex flex-col px-8 py-8'>
                             <h3 className='text-xl text-emerald-500 mb-2'>About the raffle</h3>
                             <p className='mb-2.5 text-slate-300'>
-                                For Christmas 2022, the Pobl Trust is running a luxury raffle for our Pobl Colleagues. Every penny raised from the sale of raffle tickets will go straight back into our annual grant awards, and to supporting more community groups and projects than ever before.
+                            For Christmas 2022, the Pobl Trust is running a luxury raffle for our Pobl Colleagues. Every penny raised from the sale of raffle tickets will go straight back into our annual grant awards, and towards supporting more community groups and projects than ever before.
                             </p>
                             <p className='mb-2.5 text-slate-300'>
                                 We have 5 amazing prizes available to 5 lucky winners:
                             </p>
                             <ul className='mb-2.5 text-slate-300 list-disc ml-8'>
-                                <li>a top of the range air fryer</li>
-                                <li>a delicious hamper of M&S goodies</li>
-                                <li>a generous Smyths Toys voucher </li>
-                                <li>a luxurious night out </li>
-                                <li>a sumptuous Christmas dinner hamper</li>
+                                <li>this year’s “must have” - a top of the range air fryer</li>
+                                <li>a delicious hamper of M&S goodies to last you throughout the Christmas period</li>
+                                <li>aa Smyths Toys voucher worth £150</li>
+                                <li>a luxurious overnight stay with dinner contribution at the 4* Parkgate Hotel in Cardiff</li>
+                                <li>A £150 voucher to a night of entertainment at any ATG venue, including the new Swansea Arena</li>
                             </ul>
                             <p className='mb-2.5 text-slate-300'>
                                 Tickets are only £2!
@@ -47,14 +47,14 @@ const entry = () => {
                             
                             <h3 className='text-md text-emerald-500 mb-2'>How to sign up?</h3>
                             <p className='mb-2.5 text-slate-300'>
-                                You’d like to sign up? Amazing! Please fill in the form on the left providing your full name and Pobl email address. Dont forget to enter an amount of tickets you wish to buy - the more tickets you buy the better your chances!
+                            You’d like to sign up? Amazing! Please fill in the form on the left providing your full name and Pobl email address. Don’t forget to enter the amount of tickets you wish to buy - the more tickets you buy the better your chances!
                             </p>
-                            <p  className='mb-2.5 text-slate-300'>
-                                Once you have signed up, please ensure you make payment for your tickets, without payment we will be unable to enter you into the raffle draw. Youll receive an email from us with your ticket number/s in due course.
+                            <p  className='mb-2.5 text-slate-300'>  
+                            Once you have signed up, please ensure you make payment for your tickets, without payment we will be unable to enter you into the raffle draw. You’ll receive an email from us with your ticket number/s in due course.
                             </p>
                             
                             <h3 className='text-md text-emerald-500 mb-2'>How to pay?</h3>
-                            <p className='mb-2.5 text-slate-300'>We will be accepting payments through the Pobl Trust Just Giving page. In order to pay, please click this link <a href='https://www.justgiving.com/campaign/luxuryraffle' className='text-pink-600 hover:underline'>Pay Here</a>.</p>
+                            <p className='mb-2.5 text-slate-300'>We will be accepting payments through the Pobl Trust Just Giving page. In order to pay, please click this link <a href='https://www.justgiving.com/campaign/luxuryraffle' className='text-pink-600 hover:underline'>Pay Here</a>. Please make sure you enter your name when making a payment, rather than using the “Anonymous” option – we want to make sure we can track down all our winners.</p>
                             
                             <p className='mt-2.5 mb-2.5 text-slate-300'>Best of luck and thanks for your support <br/><span className='font-bold'>Pobl Trust Team</span></p>
                         </div>
