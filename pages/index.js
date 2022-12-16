@@ -107,10 +107,11 @@ export default function Home() {
 
       <div className='bg-image bg-slate-900 text-white h-screen w-screen flex flex-col items-center p-8' ref={confettiWrapper}>
         <h1 className='text-4xl font-bold'>
-          Raffle Giveaway{' '}
-          <span className='text-sm text-gray-500'>by Pobl Trust</span>
+          Thank You! Raffle is now closed. Contact Pobk Trust for more information.
+          {/* <span className='text-sm text-gray-500'>by Pobl Trust</span> */}
         </h1>
-        {!initialLoad && !isLoading && (
+
+        {/* {!initialLoad && !isLoading && (
         <div className='w-full flex flex-row justify-center items-center gap-3 mt-6'>
           <button
             onClick={startRaffle} 
@@ -173,7 +174,7 @@ export default function Home() {
             </button>
           </div>
         )}
-        </div>
+        </div> */}
 
       </div>
     </>
