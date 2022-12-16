@@ -107,7 +107,7 @@ export default function Home() {
 
       <div className='bg-image bg-slate-900 text-white h-screen w-screen flex flex-col items-center p-8' ref={confettiWrapper}>
         <h1 className='text-4xl font-bold'>
-          Thank You! Raffle is now closed. Contact Pobk Trust for more information.
+          Thank You! Raffle is now closed. Contact Pobl Trust for more information.
           {/* <span className='text-sm text-gray-500'>by Pobl Trust</span> */}
         </h1>
 
